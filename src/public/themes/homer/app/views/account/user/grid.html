@@ -1,0 +1,21 @@
+<div class="row" ng-init="ctrl.index()">
+    <div class="col-lg-3" ng-repeat="model in collection">
+        <div class="hpanel hblue contact-panel">
+            <div class="panel-body">
+                <img ng-src="{{ model.Profile.Photo || 'images/no_photo.jpg' }}" alt="logo" class="img-circle m-b"/>
+                <h3><a href="">{{ model.Profile.DisplayName || model.Name }}</a></h3>
+                <p>{{ model.Profile.About }}</p>
+            </div>
+            <div class="panel-footer contact-footer"><div class="row">
+                <div class="col-xs-6 border-right"><div class="contact-stat">
+                    <a class="btn btn-info btn-xs" ui-sref="user.edit({ id: model.Id })" title="{{ 'EDIT' | translate }}">
+                        <i class="fa fa-edit"></i></a>
+                </div></div>
+                <div class="col-xs-6"><div class="contact-stat">
+                    <a class="btn btn-danger btn-xs" ng-click="ctrl.destroy(model.Id)" title="{{ 'DELETE' | translate }}">
+                        <i class="fa fa-trash-o"></i></a>
+                </div></div>
+            </div></div>
+        </div>
+    </div>
+</div>

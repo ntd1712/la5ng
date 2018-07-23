@@ -1,0 +1,31 @@
+<div class="form-group"><label class="control-label col-sm-2">&#42; {{ 'NAME' | translate }}</label>
+    <div class="col-sm-6">
+        <input type="text" class="form-control input-sm" required ng-model="model.Name"/>
+        <small><span class="help-block m-b-none">{{ 'ALLOWS_ONLY_ALPHANUMERIC_CHARACTERS_AND_SPACES' | translate }}</span></small>
+    </div>
+</div>
+<div class="form-group"><label class="control-label col-sm-2">{{ 'DESCRIPTION' | translate }}</label>
+    <div class="col-sm-6">
+        <textarea class="form-control input-sm" rows="2" ng-maxlength="255" ng-model="model.Description" unescape></textarea>
+        <small><span class="help-block m-b-none"><span class="text-info">{{ model.Description.length || 255 }}</span> / {{ '255_CHARACTERS_LEFT' | translate }}</span></small>
+    </div>
+</div>
+<div class="form-group"><label class="control-label col-sm-2">{{ 'PRIVILEGES' | translate }}</label>
+    <div class="col-sm-10"><div class="hpanel" style="margin-bottom:0">
+        <div class="panel-heading hbuilt">
+            <div panel-tools></div>
+            <a class="btn btn-info btn-xs" ng-click="ctrl.toggle('check')">{{ 'CHECK_ALL' | translate }}</a>
+            <a class="btn btn-info btn-xs" ng-click="ctrl.toggle('uncheck')">{{ 'UNCHECK_ALL' | translate }}</a>
+            <a class="btn btn-info btn-xs" ng-click="ctrl.reset()">{{ 'RESET' | translate }}</a>
+        </div>
+        <div class="panel-body">
+            <div class="row" ng-repeat="permission in ::permissions track by permission.Id">
+                <div class="col-sm-4 border-right"><label>
+                    <input type="checkbox" checklist-model="model.Permissions" checklist-value="permission" checklist-comparator=".Id"/>
+                    {{ permission.Name }}
+                </label></div>
+                <div class="col-sm-8"><p>{{ permission.Description }}</p></div>
+            </div>
+        </div>
+    </div></div>
+</div>

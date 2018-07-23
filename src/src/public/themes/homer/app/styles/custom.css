@@ -1,0 +1,35 @@
+.pull-right {
+    float: right;
+}
+.pull-left {
+    float: left;
+}
+.text-wrap {
+    word-break: break-all;
+}
+.vmenured {
+    border-right: solid 4px #EF6079!important
+}
+.vmenugreen {
+    border-right: solid 4px #a3d117!important
+}
+.vmenublue {
+    border-right: solid 4px #4FABDE!important
+}
+.vmenuorange {
+    border-right: solid 4px #d26f18!important
+}
+.vmenubrown {
+    border-right: solid 4px #AAA!important
+}
+#side-menu li.active .nav li:last-child {
+    border-bottom: 0
+}
+#side-menu li.active,
+#side-menu.nav>li>a:focus,
+#side-menu.nav>li>a:hover {
+    background: none
+}
+.noty_body {
+    font-size: 13px !important;
+}

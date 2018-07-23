@@ -1,0 +1,37 @@
+{
+  "EDIT_USER": "编辑用户",
+  "FROM_HERE_YOU_CAN_BROWSE_ALL_OF_THE_LATEST_USER_ACCOUNTS": "从这里，您可以浏览所有最新的用户帐户。",
+  "FROM_HERE_YOU_CAN_CREATE_A_NEW_USER_ACCOUNT": "从这里，您可以创建一个新的用户帐户。",
+  "FROM_HERE_YOU_CAN_EDIT_AN_EXISTING_USER_ACCOUNT": "从这里，您可以编辑现有的用户帐户。",
+
+  "ACCOUNT_INFORMATION": "帐户信息",
+  "PROFILE_INFORMATION": "档案信息",
+  "USERNAME": "用户名",
+  "EMAIL_ADDRESS": "邮件地址",
+  "PASSWORD": "密码",
+  "PRIMARY_ROLE": "主要角色",
+  "SECONDARY_ROLES": "次要角色",
+  "DISPLAY_NAME": "显示名称",
+  "PHOTO": "照片",
+  "ABOUT": "关于",
+
+  "REGISTER": "寄存器",
+  "COULD_NOT_REGISTER": "无法注册。",
+  "YOU_HAVE_SUCCESSFULLY_REGISTERED": "您已成功注册。",
+
+  "LOGIN": "登录",
+  "PLEASE_LOGIN": "请登录",
+  "REMEMBER_ME": "记住登录",
+  "IF_ON_A_PRIVATE_COMPUTER": "( 如果这是一台私人电脑 )",
+  "PLEASE_ENTER_YOUR_EMAIL_ADDRESS": "请输入您的电子邮件地址。",
+  "PLEASE_ENTER_YOUR_PASSWORD": "请输入您的密码。",
+  "COULD_NOT_LOG_IN": "无法登录。",
+
+  "RESET_PASSWORD": "重设密码",
+  "COULD_NOT_RESET_PASSWORD": "无法重置密码。",
+  "PASSWORD_DOES_NOT_MATCH_THE_CONFIRM_PASSWORD": "密码与确认密码不匹配。",
+
+  "RECOVERY_PASSWORD": "恢复密码",
+  "PLEASE_CHECK_YOUR_EMAIL_FOR_THE_RESET_PASSWORD_INSTRUCTIONS": "请检查您的电子邮件是否有重置密码说明。",
+  "YOUR_EMAIL_IS_INVALID": "您的电子邮件无效。"
+}

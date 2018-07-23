@@ -1,0 +1,25 @@
+<!-- header & navigation -->
+<div id="header" ng-include="'views/common/header.html'"></div>
+<aside id="menu" ng-include="'views/common/navigation.html'"></aside>
+<!-- wrapper -->
+<div id="wrapper">
+    <!-- breadcrumb -->
+    <div class="small-header" small-header>
+        <div class="hpanel">
+            <div class="panel-body">
+                <div id="hbreadcrumb" class="pull-right"><ol class="hbreadcrumb breadcrumb">
+                    <li ng-repeat="state in $state.$current.path" ng-switch="$last" ng-class="{ active: $last }" ng-if="state.data.pageTitle">
+                        <a href="/#{{ state.url.format($stateParams) }}" ng-switch-when="false">{{ state.data.pageTitle | translate }}</a>
+                        <span ng-switch-when="true">{{ state.data.pageTitle | translate }}</span>
+                    </li>
+                </ol></div>
+                <h2 class="font-light m-b-xs">{{ $state.current.data.pageTitle | translate }}</h2>
+                <small>{{ $state.current.data.pageDesc | translate }}</small>
+            </div>
+        </div>
+    </div>
+    <!-- content -->
+    <div class="content">
+        <div ui-view></div>
+    </div>
+</div>

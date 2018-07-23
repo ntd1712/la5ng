@@ -1,0 +1,75 @@
+{
+  "name": "chaos/la5ng",
+  "description": "A Laravel 5 + Doctrine 2 + Angular boilerplate",
+  "type": "project",
+  "keywords": ["ntd1712", "chaos", "la5ng", "laravel", "doctrine", "angular"],
+  "homepage": "https://github.com/ntd1712",
+  "license": "GPL-2.0",
+  "authors": [
+    {"name": "Dzung Nguyen", "email": "ntd1712@mail.com"}
+  ],
+  "require": {
+    "chaos/common": "dev-master",
+    "league/oauth2-client": "~2.3.0",
+    "laravel/framework": "~5.4.36",
+    "barryvdh/laravel-cors": "~0.11.0",
+    "tymon/jwt-auth": "~0.5.12"
+  },
+  "require-dev": {
+    "barryvdh/laravel-ide-helper": "^2.4",
+    "fzaninotto/faker": "^1.8",
+    "squizlabs/php_codesniffer": "^3.3"
+  },
+  "autoload": {
+    "classmap": [
+      "database"
+    ],
+    "psr-4": {
+      "App\\": "app/",
+      "": "modules/"
+    },
+    "exclude-from-classmap": [
+      "/tests/"
+    ]
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/TestCase.php"
+    ],
+    "psr-4": {
+      "App\\Tests\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [{
+    "type": "vcs",
+    "url": "https://github.com/ntd1712/common"
+  }],
+  "config": {
+    "discard-changes": true,
+    "preferred-install": "dist",
+    "process-timeout": 5000,
+    "store-auths": true,
+    "optimize-autoloader": true
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "php artisan key:generate"
+    ],
+    "post-install-cmd": [
+      "sh update"
+    ],
+    "post-update-cmd": [
+      "sh update"
+    ],
+    "sniff": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+    "format": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+  },
+  "archive": {
+    "exclude": ["!vendor", "tests", "*phpunit.xml", ".travis.yml", "composer.phar"]
+  }
+}

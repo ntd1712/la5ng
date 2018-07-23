@@ -1,0 +1,85 @@
+{
+  "name": "Inspinia",
+  "version": "2.6.2.1",
+  "main": "inspinia.html",
+  "dependencies": {
+    "animate.css": "~3.5.2",
+    "font-awesome": "~4.7.0",
+    "pixeden-stroke-7-icon": "~1.2.3",
+
+    "blazy": "~1.8.2",
+    "chartjs": "~2.5.0",
+    "lockr": "~0.8.4",
+    "lodash": "~4.17.4",
+    "moment": "~2.18.1",
+    "TimelineJS3": "NUKnightLab/TimelineJS3#~3.5.1",
+
+    "jquery": "~2.2.4",
+    "jquery-ui": "~1.12.1",
+    "bootstrap": "~3.3.7",
+    "bootstrap-sweetalert": "~1.0.1",
+    "bootstrap-touchspin": "~3.1.2",
+    "datatables.net-bs": "~1.10.15",
+    "datatables.net-plugins": "~1.10.15",
+    "fullcalendar": "~3.3.1",
+    "icheck2": "~2.0.1",
+    "jquery-ui-touch-punch": "",
+    "masonry": "~4.2.0",
+    "metisMenu": "~2.7.0",
+    "noty": "~3.1.0",
+    "slimScroll": "~1.3.8",
+    "summernote": "~0.8.3",
+    "toolbar.js.extended": "~1.1.0",
+
+    "easy-pie-chart": "~2.1.6",
+    "flot": "~0.8.3",
+    "flot.curvedlines": "~1.1.1",
+    "flot.orderbars": "~1.0.0",
+    "flot-spline": "~0.8.2",
+    "flot.tooltip": "~0.9.0",
+    "jquery-sparkline": "imsky/jquery.sparkline#~2.4.0",
+    "peity": "~3.2.1",
+
+    "angular": "~1.6.4",
+    "angular-animate": "~1.6.4",
+    "angular-aria": "~1.6.4",
+    "angular-cookies": "~1.6.4",
+    "angular-messages": "~1.6.4",
+    "angular-resource": "~1.6.4",
+    "angular-route": "~1.6.4",
+    "angular-sanitize": "~1.6.4",
+    "angular-touch": "~1.6.4",
+
+    "angular-bootstrap": "~2.5.0",
+    "angular-ui-calendar": "~1.0.2",
+    "angular-ui-router": "~1.0.3",
+    "angular-ui-select": "~0.19.8",
+
+    "angular-datatables": "~0.6.2",
+    "angular-jwt": "~0.1.9",
+    "angular-translate-loader-partial": "~2.15.1",
+    "angular-xeditable": "~0.7.1",
+    "checklist-model": "~0.11.0",
+    "ng-file-upload": "~12.2.13",
+    "oclazyload": "~1.1.0"
+  },
+  "resolutions": {
+    "moment": "~2.18.1",
+    "jquery": "~2.2.4",
+    "fullcalendar": "~3.3.1",
+    "angular": "~1.6.4"
+  },
+  "authors": [
+    "Damian Dudziak - WebAppLayers"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "examples",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "appPath": "app"
+}

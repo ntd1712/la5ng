@@ -1,0 +1,25 @@
+<div class="row" ng-init="ctrl.bootstrap('grid')"><div class="col-lg-12"><div class="hpanel">
+    <div class="table-responsive panel-body">
+        <table datatable="" dt-options="dtOptions" dt-disable-deep-watchers="true"
+        class="table table-condensed table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>{{ 'NAME' | translate }}</th>
+                    <th>{{ 'VALUE' | translate }}</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="model in collection">
+                    <td class="col-sm-4">{{ model.Name }}</td>
+                    <td class="col-sm-6 text-wrap">{{ model.Value }}</td>
+                    <td class="col-sm-1 text-center">
+                        <a class="btn btn-success btn-xs" title="View Details"><i class="fa fa-file-text-o"></i></a>
+                        <a class="btn btn-info btn-xs" title="Edit"><i class="fa fa-edit"></i></a>
+                        <a class="btn btn-danger btn-xs" title="Delete"><i class="fa fa-trash-o"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div></div></div>

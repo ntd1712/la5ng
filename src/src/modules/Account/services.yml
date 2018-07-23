@@ -1,0 +1,56 @@
+services:
+  Account\Entities\Permission:
+    class:  Account\Entities\Permission
+    lazy:   true
+    shared: false
+  Account\Events\PermissionListener:
+    class:  Account\Events\PermissionListener
+    lazy:   true
+    shared: false
+  Account\Services\PermissionService:
+    class:  Account\Services\PermissionService
+    lazy:   true
+  Permission: '@Account\Entities\Permission'
+  PermissionService: '@Account\Services\PermissionService'
+
+  Account\Entities\Role:
+    class:  Account\Entities\Role
+    lazy:   true
+    shared: false
+  Account\Events\RoleListener:
+    class:  Account\Events\RoleListener
+    lazy:   true
+    shared: false
+  Account\Services\RoleService:
+    class:  Account\Services\RoleService
+    lazy:   true
+  Role: '@Account\Entities\Role'
+  RoleService: '@Account\Services\RoleService'
+
+  Account\Entities\User:
+    class:  Account\Entities\User
+    lazy:   true
+    shared: false
+  Account\Events\UserListener:
+    class:  Account\Events\UserListener
+    lazy:   true
+    shared: false
+  Account\Services\UserService:
+    class:  Account\Services\UserService
+    lazy:   true
+  User: '@Account\Entities\User'
+  UserService: '@Account\Services\UserService'
+
+  Account\Entities\UserRole:
+    class:  Account\Entities\UserRole
+    lazy:   true
+    shared: false
+  Account\Events\UserRoleListener:
+    class:  Account\Events\UserRoleListener
+    lazy:   true
+    shared: false
+  Account\Services\UserRoleService:
+    class:  Account\Services\UserRoleService
+    lazy:   true
+  UserRole: '@Account\Entities\UserRole'
+  UserRoleService: '@Account\Services\UserRoleService'

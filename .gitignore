@@ -1,0 +1,35 @@
+*~
+*.bak
+*.log
+*.orig
+*.tmp
+.unison.*
+
+dist/
+test/unit/coverage
+test/e2e/reports
+selenium-debug.log
+
+# Composer, Bower, Node, Sass
+composer.phar
+vendor/
+bower_components
+node_modules
+npm-debug.log*
+.sass-cache/
+*.css.map
+
+# Eclipse, NetBeans, PhpStorm, SublimeText, Vim
+.project
+.buildpath
+.settings/
+nbproject/
+.idea/
+*.cache
+*.sublime-*
+*.swp
+
+# OS
+._*
+.DS_Store
+Thumbs.db

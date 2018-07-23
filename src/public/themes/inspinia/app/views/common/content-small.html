@@ -1,0 +1,28 @@
+<!-- wrapper -->
+<div id="wrapper">
+    <!-- navigation -->
+    <div ng-include="'views/common/navigation.html'"></div>
+    <div id="page-wrapper" class="gray-bg {{ $state.current.name }}">
+        <div ng-include="'views/common/topnavbar.html'"></div>
+        <!-- breadcrumb -->
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>{{ $state.current.data.pageTitle | translate }}</h2>
+                <ol class="breadcrumb">
+                    <li><a ui-sref="{{ CFG.app.default_route }}">{{ 'DASHBOARD' | translate }}</a></li>
+                    <li ng-repeat="state in $state.$current.path" ng-switch="$last" ng-class="{ active: $last }" ng-if="state.data.pageTitle">
+                        <a href="/#{{ state.url.format($stateParams) }}" ng-switch-when="false">{{ state.data.pageTitle | translate }}</a>
+                        <strong ng-switch-when="true">{{ state.data.pageTitle | translate }}</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+        <!-- content -->
+        <div class="wrapper wrapper-content animated pulse" ui-view></div>
+        <!-- footer -->
+        <div ng-include="'views/common/footer.html'"></div>
+    </div>
+    <!-- sidebar -->
+    <!--div ng-include="'views/common/right_sidebar.html'"></div-->
+</div>

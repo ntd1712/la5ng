@@ -1,0 +1,62 @@
+<div id="navigation">
+    <!-- user profile -->
+    <div class="profile-picture">
+        <img src="{{ 'images/logo.png' }}" alt="logo" style="width:100px"/>
+    </div>
+    <!-- side menu -->
+    <ul class="nav" id="side-menu" side-navigation>
+        <li class="vmenublue" ui-sref-active="active">
+            <a ui-sref="dashboard"><span class="nav-label">{{ 'DASHBOARD' | translate }}</span></a>
+        </li>
+        <li class="vmenuorange" if-role="backend.account" ng-class="{ active: account_active }"
+        ng-init="account_active = $state.includes('user') || $state.includes('role') || $state.includes('permission')">
+            <a href="#"><span class="nav-label">{{ 'ACCOUNT' | translate }}</span><span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level" ng-class="{ in: account_active }">
+                <li if-role="backend.account.user" ng-class="{ active: $state.includes('user') }">
+                    <a href="#"><span class="nav-label">{{ 'USER' | translate }}</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level" ng-class="{ in: $state.includes('user') }">
+                        <li ui-sref-active="active"><a ui-sref="user.index">{{ 'MANAGE_USERS' | translate }}</a></li>
+                        <li ui-sref-active="active"><a ui-sref="user.create">{{ 'CREATE_USER' | translate }}</a></li>
+                    </ul>
+                </li>
+                <li if-role="backend.account.role" ng-class="{ active: $state.includes('role') }">
+                    <a href="#"><span class="nav-label">{{ 'ROLE' | translate }}</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level" ng-class="{ in: $state.includes('role') }">
+                        <li ui-sref-active="active"><a ui-sref="role.index">{{ 'MANAGE_ROLES' | translate }}</a></li>
+                        <li ui-sref-active="active"><a ui-sref="role.create">{{ 'CREATE_ROLE' | translate }}</a></li>
+                    </ul>
+                </li>
+                <li if-role="backend.account.permission" ng-class="{ active: $state.includes('permission') }">
+                    <a href="#"><span class="nav-label">{{ 'PERMISSION' | translate }}</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level" ng-class="{ in: $state.includes('permission') }">
+                        <li ui-sref-active="active"><a ui-sref="permission.index">{{ 'MANAGE_PERMISSIONS' | translate }}</a></li>
+                        <li ui-sref-active="active"><a ui-sref="permission.create">{{ 'CREATE_PERMISSION' | translate }}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="vmenubrown" if-role="backend.system" ng-class="{ active: system_active }"
+        ng-init="system_active = $state.includes('setting') || $state.includes('lookup') || $state.includes('audit')">
+            <a href="#"><span class="nav-label">{{ 'SYSTEM' | translate }}</span><span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level" ng-class="{ in: system_active }">
+                <li if-role="backend.system.setting" ng-class="{ active: $state.includes('setting') }">
+                    <a href="#"><span class="nav-label">{{ 'SETTING' | translate }}</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level" ng-class="{ in: $state.includes('setting') }">
+                        <li ui-sref-active="active"><a ui-sref="setting.index">{{ 'MANAGE_SETTINGS' | translate }}</a></li>
+                        <li ui-sref-active="active"><a ui-sref="setting.create">{{ 'CREATE_SETTING' | translate }}</a></li>
+                    </ul>
+                </li>
+                <li if-role="backend.system.lookup" ng-class="{ active: $state.includes('lookup') }">
+                    <a href="#"><span class="nav-label">{{ 'LOOKUP' | translate }}</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level" ng-class="{ in: $state.includes('lookup') }">
+                        <li ui-sref-active="active"><a ui-sref="lookup.index">{{ 'MANAGE_LOOKUPS' | translate }}</a></li>
+                        <li ui-sref-active="active"><a ui-sref="lookup.create">{{ 'CREATE_LOOKUP' | translate }}</a></li>
+                    </ul>
+                </li>
+                <li if-role="backend.system.audit" ui-sref-active="active">
+                    <a ui-sref="audit"><span class="nav-label">{{ 'AUDIT_TRAIL' | translate }}</span></a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

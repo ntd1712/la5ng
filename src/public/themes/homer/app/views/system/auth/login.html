@@ -1,0 +1,22 @@
+<div class="color-line"></div>
+<div class="login-container"><div class="row" ng-init="ctrl.bootstrap('form')"><div class="col-md-12">
+    <div class="text-center m-b-md"><h3>{{ 'PLEASE_LOGIN' | translate }}</h3></div>
+    <div class="hpanel"><div class="panel-body">
+        <p class="text-danger" ng-if="error">{{ error }}</p>
+        <form name="loginForm" ng-submit="ctrl.login(model)">
+            <div class="form-group"><label class="control-label" for="login-email">{{ 'EMAIL_ADDRESS' | translate }}</label>
+                <input type="email" name="email" id="login-email" class="form-control" placeholder="example@gmail.com"
+                       title="{{ 'PLEASE_ENTER_YOUR_EMAIL_ADDRESS' | translate }}" ng-model="model.email" required/>
+            </div>
+            <div class="form-group"><label class="control-label" for="login-password">{{ 'PASSWORD' | translate }}</label>
+                <input type="password" name="password" id="login-password" class="form-control" placeholder="******"
+                       title="{{ 'PLEASE_ENTER_YOUR_PASSWORD' | translate }}" ng-model="model.password" required/>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" icheck ng-init="model.remember_token = true" ng-model="model.remember_token"/>&nbsp;
+                {{ 'REMEMBER_ME' | translate }} {{ 'IF_ON_A_PRIVATE_COMPUTER' | translate }}
+            </div>
+            <button class="btn btn-success btn-block" ng-disabled="!error && loginForm.$submitted">{{ 'LOGIN' | translate }}</button>
+        </form>
+    </div></div>
+</div></div></div>

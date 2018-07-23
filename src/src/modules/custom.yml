@@ -1,0 +1,5 @@
+app:
+  copyright: Copyright (c) 2017 ntd1712
+  title: Admin Panel
+  imageAllowedExt: gif,jpeg,jpg,png
+  imageMaxSize: 2097152 # 2mb, in bytes

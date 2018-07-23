@@ -1,0 +1,11 @@
+{
+  "DATE": "日期",
+  "NAME": "用户",
+  "ACTION": "行动",
+  "INFORMATION": "信息",
+  "TYPE": "类型",
+  "IP_ADDRESS": "IP地址",
+  "REQUEST": "请求",
+  "PARAMETERS": "参数",
+  "REFERRER": "推荐人"
+}

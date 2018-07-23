@@ -1,0 +1,37 @@
+{
+  "EDIT_USER": "Edit User",
+  "FROM_HERE_YOU_CAN_BROWSE_ALL_OF_THE_LATEST_USER_ACCOUNTS": "From here you can browse all of the latest user accounts.",
+  "FROM_HERE_YOU_CAN_CREATE_A_NEW_USER_ACCOUNT": "From here you can create a new user account.",
+  "FROM_HERE_YOU_CAN_EDIT_AN_EXISTING_USER_ACCOUNT": "From here you can edit an existing user account.",
+
+  "ACCOUNT_INFORMATION": "Account Information",
+  "PROFILE_INFORMATION": "Profile Information",
+  "USERNAME": "Username",
+  "EMAIL_ADDRESS": "Email Address",
+  "PASSWORD": "Password",
+  "PRIMARY_ROLE": "Primary Role",
+  "SECONDARY_ROLES": "Secondary Roles",
+  "DISPLAY_NAME": "Display Name",
+  "PHOTO": "Photo",
+  "ABOUT": "About",
+
+  "REGISTER": "Register",
+  "COULD_NOT_REGISTER": "Could not register.",
+  "YOU_HAVE_SUCCESSFULLY_REGISTERED": "You have successfully registered.",
+
+  "LOGIN": "Login",
+  "PLEASE_LOGIN": "PLEASE LOGIN",
+  "REMEMBER_ME": "Remember me?",
+  "IF_ON_A_PRIVATE_COMPUTER": "( if on a private computer )",
+  "PLEASE_ENTER_YOUR_EMAIL_ADDRESS": "Please enter you email address.",
+  "PLEASE_ENTER_YOUR_PASSWORD": "Please enter your password.",
+  "COULD_NOT_LOG_IN": "Could not log in.",
+
+  "RESET_PASSWORD": "Reset Password",
+  "COULD_NOT_RESET_PASSWORD": "Could not reset password.",
+  "PASSWORD_DOES_NOT_MATCH_THE_CONFIRM_PASSWORD": "Password does not match the confirm password.",
+
+  "RECOVERY_PASSWORD": "Recovery Password",
+  "PLEASE_CHECK_YOUR_EMAIL_FOR_THE_RESET_PASSWORD_INSTRUCTIONS": "Please check your email for the reset password instructions.",
+  "YOUR_EMAIL_IS_INVALID": "Your email is invalid."
+}

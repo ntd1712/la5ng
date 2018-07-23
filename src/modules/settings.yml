@@ -1,0 +1,75 @@
+app:
+  default_route: setting.index
+  fallback_locale: en
+  locale: en
+  theme: homer  # homer, inspinia
+  url: ''
+
+auth:
+  default_driver: ~
+  drivers:
+    oauth2:
+      redirectUri: %base_url%
+
+framework:
+  application_key: uV3tbdxO12KrSJgN7mjbOQvXX69Wn3oL
+
+doctrine:
+  dbal:
+    schema_filter: tbl_
+    connections:
+      default:
+        dbname: la5ng
+        host: localhost
+        port: 3306
+        user: root
+        password: ~
+  orm:
+    auto_generate_proxy_classes: 1
+    proxy_dir: %base_path%/storage/framework/proxies
+    entity_managers:
+      default:
+        query_cache_driver:
+#          type: filesystem
+          directory: %base_path%/storage/framework/cache
+        metadata_cache_driver:
+#          type: filesystem
+          directory: %base_path%/storage/framework/cache
+        result_cache_driver:
+#          type: filesystem
+          directory: %base_path%/storage/framework/cache
+        mappings:
+          default:
+            dir:
+            - %base_path%/modules/Account/Entities
+            - %base_path%/modules/System/Entities
+            use_simple_annotation_reader: false
+
+mail:
+  default_mailer: default
+  mailers:
+    default:
+      transport: smtp
+      username: ~
+      password: ~
+      host: localhost
+      port: false
+      encryption: tls
+      auth_mode: login
+
+session:
+  name: Laravel_session
+  cookie_lifetime: 7200
+  cookie_domain: la5ng.local
+
+paths:
+  api: %base_path%/public/api
+  config: %base_path%/modules/custom.yml
+  uploads: %base_path%/public/uploads
+
+urls:
+  api: %base_url%/api
+  reset: %base_url%/#/reset?k=
+
+imports:
+  - { resource: custom.yml }

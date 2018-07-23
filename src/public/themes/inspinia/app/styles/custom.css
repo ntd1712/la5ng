@@ -1,0 +1,6 @@
+.text-wrap {
+    word-break:break-all;
+}
+#snarl-wrapper {
+    z-index: 9999;
+}

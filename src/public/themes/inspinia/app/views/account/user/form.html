@@ -1,0 +1,50 @@
+<div class="row m-b-md" ng-init="step = 1"><div class="col-sm-10 col-sm-offset-2">
+    <a ng-click="step = 1" class="btn" ng-class="{ 'btn-primary': step == 1, 'btn-default': 1 != step }">{{ 'ACCOUNT_INFORMATION' | translate }}</a>
+    <a ng-click="step = 2" class="btn" ng-class="{ 'btn-primary': step == 2, 'btn-default': 2 != step }">{{ 'PROFILE_INFORMATION' | translate }}</a>
+</div></div>
+
+<div class="row" ng-show="step == 1">
+    <div class="form-group"><label class="control-label col-sm-2">&#42; {{ 'USERNAME' | translate }}</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control input-sm" placeholder="username" required ng-model="model.Name"/>
+            <small><span class="help-block m-b-none">{{ 'ALLOWS_ONLY_ALPHANUMERIC_CHARACTERS' | translate }}</span></small>
+        </div>
+    </div>
+    <div class="form-group"><label class="control-label col-sm-2">&#42; {{ 'EMAIL_ADDRESS' | translate }}</label>
+        <div class="col-sm-6"><input type="email" class="form-control input-sm" placeholder="user@email.com" required ng-model="model.Email"/></div>
+    </div>
+    <div class="form-group"><label class="control-label col-sm-2">&#42; {{ 'PASSWORD' | translate }}</label>
+        <div class="col-sm-6"><input type="password" class="form-control input-sm" placeholder="******" required ng-model="model.Password"/></div>
+    </div>
+    <div class="form-group"><label class="control-label col-sm-2">&#42; {{ 'PRIMARY_ROLE' | translate }}</label>
+        <div class="col-sm-6">
+            <select class="form-control input-sm" required ng-model="roles.primary" ng-change="roles.secondary = []"
+            ng-options="role.Name for role in roles.data track by role.Id"><option value="">{{ 'CHOOSE' | translate }}</option></select>
+        </div>
+    </div>
+    <div class="form-group"><label class="control-label col-sm-2">{{ 'SECONDARY_ROLES' | translate }}</label>
+        <div class="col-sm-6">
+            <ui-select multiple ng-model="roles.secondary">
+                <ui-select-match>{{ $item.Name }}</ui-select-match>
+                <ui-select-choices repeat="role in roles.data | filter: roles.filter track by role.Id">
+                    <div ng-bind-html="role.Name | highlight: $select.search"></div>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+    </div>
+</div>
+
+<div class="row" ng-show="step == 2">
+    <div class="form-group"><label class="control-label col-sm-2">{{ 'DISPLAY_NAME' | translate }}</label>
+        <div class="col-sm-6"><input type="text" class="form-control input-sm" ng-model="model.Profile.DisplayName"/></div>
+    </div>
+    <div class="form-group"><label class="control-label col-sm-2">{{ 'PHOTO' | translate }}</label>
+        <div class="col-sm-6"><input type="text" class="form-control input-sm" ng-model="model.Profile.Photo"/></div>
+    </div>
+    <div class="form-group"><label class="control-label col-sm-2">{{ 'ABOUT' | translate }}</label>
+        <div class="col-sm-6">
+            <textarea class="form-control input-sm" rows="2" ng-maxlength="255" ng-model="model.Profile.About" unescape></textarea>
+            <small><span class="help-block m-b-none"><span class="text-info">{{ model.Profile.About.length || 255 }}</span> / {{ '255_CHARACTERS_LEFT' | translate }}</span></small>
+        </div>
+    </div>
+</div>

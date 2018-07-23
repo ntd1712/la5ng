@@ -1,0 +1,52 @@
+<<<<<<< HEAD
+*~
+*.bak
+*.log
+*.orig
+*.tmp
+.unison.*
+
+dist/
+test/unit/coverage
+test/e2e/reports
+selenium-debug.log
+
+# Composer, Bower, Node, Sass
+composer.phar
+vendor/
+bower_components
+node_modules
+npm-debug.log*
+.sass-cache/
+*.css.map
+
+# Eclipse, NetBeans, PhpStorm, SublimeText, Vim
+.project
+.buildpath
+.settings/
+nbproject/
+.idea/
+*.cache
+*.sublime-*
+*.swp
+
+# OS
+._*
+.DS_Store
+Thumbs.db
+=======
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+.env
+/.phpstorm.meta.php
+/_ide_helper.php
+/readme.md
+>>>>>>> Recommit
