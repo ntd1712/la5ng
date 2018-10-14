@@ -19,7 +19,7 @@ class UserRole extends AbstractBaseEntity
      * @Doctrine\ORM\Mapping\ManyToOne(targetEntity="User", inversedBy="Roles")
      * @Doctrine\ORM\Mapping\JoinColumn(name="user_id", referencedColumnName="id")
      */
-    protected $User;
+    private $User;
     /**
      * @Doctrine\ORM\Mapping\Id
      * @Doctrine\ORM\Mapping\ManyToOne(targetEntity="Role", inversedBy="Users", fetch="EAGER")

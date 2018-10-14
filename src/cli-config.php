@@ -20,5 +20,10 @@ $config['__options__'] = [
     ]
 ];
 
-$entityManager = Chaos\Bridge\Doctrine\EntityManagerFactory::createInstance($config)->getEntityManager();
-return Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($entityManager);
+try {
+    return Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet(
+        (new Chaos\Bridge\Doctrine\EntityManagerFactory)->__invoke(null, null, $config)
+    );
+} catch (Exception $ex) {
+    //
+}

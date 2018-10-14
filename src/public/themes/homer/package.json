@@ -5,7 +5,6 @@
     "animate.css": "~3.5.2",
     "font-awesome": "~4.7.0",
     "pixeden-stroke-7-icon": "~1.2.3",
-
     "api-check": "~7.5.5",
     "blazy": "~1.8.2",
     "chart.js": "~2.7.1",
@@ -13,7 +12,6 @@
     "lodash": "~4.17.5",
     "moment": "~2.20.1",
     "TimelineJS3": "NUKnightLab/TimelineJS3#3.5.1",
-
     "jquery": "~3.3.1",
     "jquery-ui": "~1.12.1",
     "bootstrap": "~3.3.7",
@@ -22,7 +20,7 @@
     "datatables.net-plugins": "DataTables/Plugins#1.10.16",
     "fullcalendar": "~3.8.2",
     "icheck": "~1.0.2",
-    "jquery-ui-touch-punch": "",
+    "jquery-ui-touch-punch": "*",
     "masonry-layout": "~4.2.1",
     "metismenu": "~2.7.2",
     "noty": "~3.1.4",
@@ -30,7 +28,6 @@
     "sweetalert2": "~7.9.2",
     "summernote": "~0.8.9",
     "toolbar.js": "lsntomaszw/toolbar#1.1.0",
-
     "easy-pie-chart": "~2.1.7",
     "Flot": "flot/flot#v0.8.3",
     "flot.curvedlines": "~1.1.1",
@@ -39,7 +36,6 @@
     "jquery.flot.tooltip": "~0.9.0",
     "jquery-sparkline": "~2.4.0",
     "peity": "~3.3.0",
-
     "angular": "~1.6.9",
     "angular-animate": "~1.6.9",
     "angular-aria": "~1.6.9",
@@ -49,12 +45,10 @@
     "angular-route": "~1.6.9",
     "angular-sanitize": "~1.6.9",
     "angular-touch": "~1.6.9",
-
     "angular-ui-bootstrap": "~2.5.6",
     "angular-ui-calendar": "~1.0.2",
     "@uirouter/angularjs": "1.0.3",
     "ui-select": "~0.19.8",
-
     "angular-datatables": "~0.6.2",
     "angular-formly": "~8.4.1",
     "angular-jwt": "~0.1.9",

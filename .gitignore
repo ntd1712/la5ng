@@ -8,9 +8,9 @@
 dist/
 test/unit/coverage
 test/e2e/reports
-selenium-debug.log
 
-# Composer, Bower, Node, Sass
+# Composer, Bower, Node, Sass, Selenium
+composer.lock
 composer.phar
 vendor/
 bower_components
@@ -18,6 +18,7 @@ node_modules
 npm-debug.log*
 .sass-cache/
 *.css.map
+selenium-debug.log
 
 # Eclipse, NetBeans, PhpStorm, SublimeText, Vim
 .project

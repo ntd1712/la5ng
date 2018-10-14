@@ -43,7 +43,7 @@ class Role extends AbstractBaseEntity
      * @Annotation\Exclude
      * @Doctrine\ORM\Mapping\OneToMany(targetEntity="UserRole", mappedBy="Role")
      */
-    protected $Users;
+    private $Users;
 
     /**
      * @return string

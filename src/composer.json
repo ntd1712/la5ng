@@ -6,17 +6,18 @@
   "homepage": "https://github.com/ntd1712",
   "license": "GPL-2.0",
   "authors": [
-    {"name": "Dzung Nguyen", "email": "ntd1712@mail.com"}
+    {"name": "ntd1712", "email": "ntd1712@hotmail.com"}
   ],
   "require": {
+    "zendframework/zend-mail": "2.5.1",
     "chaos/common": "dev-master",
-    "league/oauth2-client": "~2.3.0",
-    "laravel/framework": "~5.4.36",
-    "barryvdh/laravel-cors": "~0.11.0",
+    "laravel/framework": "~5.0.35",
+    "barryvdh/laravel-cors": "~0.7.3",
+    "league/oauth2-client": "~0.12",
     "tymon/jwt-auth": "~0.5.12"
   },
   "require-dev": {
-    "barryvdh/laravel-ide-helper": "^2.4",
+    "barryvdh/laravel-ide-helper": "~2.4.3",
     "fzaninotto/faker": "^1.8",
     "squizlabs/php_codesniffer": "^3.3"
   },
